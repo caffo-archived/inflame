@@ -1,9 +1,32 @@
 = inflame
 
-Description goes here.
+Command line utility to send books to your kindle.
+
+== Setup instructions
+
+* Create a .inflame file in your home directory. It should look like this:
+
+<tt>
+gmail:
+    username: inflame@gmail.com
+    password: password42
+kindle:
+    email: inflame@free.kindle.com
+</tt>
+
+== Usage
+
+<tt>
+$ inflame
+
+inflame - missing filename
+usage: inflame /path/to/book.pdf
+supported filetypes: unprotected Microsoft Word, PDF, HTML, TXT, RTF, JPEG, GIF, PNG, BMP, PRC and MOBI
+
+</tt>
 
 == Contributing to inflame
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project

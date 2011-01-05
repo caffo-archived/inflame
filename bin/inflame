@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+$:.unshift(File.dirname(__FILE__) + '/../lib')
+
+require 'rubygems'
+require 'yaml'
+require 'gmail'
+
+if ARGV[0]
+  settings  =  YAML::load(File.open("#{ENV['HOME']}/.inflame"))
+  gmail     = Gmail.connect(settings["gmail"]["username"], settings["gmail"]["password"])
+  if File.exists?(ARGV[0])
+    puts "Inflaming #{ARGV[0]} to #{settings["kindle"]["email"]}"
+    message    = gmail.message
+    message.to = settings["kindle"]["email"]
+    message.add_file ARGV[0]
+    message.deliver
+  else
+    puts "File not found. Please check file path."
+  end
+else
+  puts "\ninflame - missing filename"
+  puts "usage: inflame /path/to/book.pdf"
+  puts "supported filetypes: unprotected Microsoft Word, PDF, HTML, TXT, RTF, JPEG, GIF, PNG, BMP, PRC and MOBI\n\n"
+end
