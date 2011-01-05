@@ -3,6 +3,9 @@
 Command line utility to send books to your kindle.
 
 == Setup instructions
+* Install the gem as usual
+
+  $ gem install inflame
 
 * Create a .inflame file in your home directory. It should look like this:
 
