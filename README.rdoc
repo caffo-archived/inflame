@@ -16,6 +16,8 @@ Command line utility to send books to your kindle.
     kindle:
       email: inflame@free.kindle.com
 
+* Make sure your gmail account is in your "Kindle Approved E-mail List". More information can be found here: http://www.amazon.com/gp/digital/fiona/manage
+
 == Usage
 
 

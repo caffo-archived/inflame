@@ -9,11 +9,12 @@ if ARGV[0]
   settings  =  YAML::load(File.open("#{ENV['HOME']}/.inflame"))
   gmail     = Gmail.connect(settings["gmail"]["username"], settings["gmail"]["password"])
   if File.exists?(ARGV[0])
-    puts "Inflaming #{ARGV[0]} to #{settings["kindle"]["email"]}"
+    puts "Inflaming #{ARGV[0]} to #{settings["kindle"]["email"]}, please wait..."
     message    = gmail.message
     message.to = settings["kindle"]["email"]
     message.add_file ARGV[0]
     message.deliver
+    puts "Done!"
   else
     puts "File not found. Please check file path."
   end
