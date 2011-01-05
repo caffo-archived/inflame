@@ -6,24 +6,22 @@ Command line utility to send books to your kindle.
 
 * Create a .inflame file in your home directory. It should look like this:
 
-<tt>
-gmail:
-    username: inflame@gmail.com
-    password: password42
-kindle:
-    email: inflame@free.kindle.com
-</tt>
+
+  gmail:
+      username: inflame@gmail.com
+      password: password42
+  kindle:
+      email: inflame@free.kindle.com
 
 == Usage
 
-<tt>
-$ inflame
 
-inflame - missing filename
-usage: inflame /path/to/book.pdf
-supported filetypes: unprotected Microsoft Word, PDF, HTML, TXT, RTF, JPEG, GIF, PNG, BMP, PRC and MOBI
+  $ inflame
 
-</tt>
+  inflame - missing filename
+  usage: inflame /path/to/book.pdf
+  supported filetypes: unprotected Microsoft Word, PDF, HTML, TXT, RTF, JPEG, GIF, PNG, BMP, PRC and MOBI
+
 
 == Contributing to inflame
 
