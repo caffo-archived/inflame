@@ -7,10 +7,10 @@ Command line utility to send books to your kindle.
 * Create a .inflame file in your home directory. It should look like this:
 
 
-  gmail:
+    gmail:
       username: inflame@gmail.com
       password: password42
-  kindle:
+    kindle:
       email: inflame@free.kindle.com
 
 == Usage
